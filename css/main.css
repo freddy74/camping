@@ -1,0 +1,357 @@
+@import url('./vars.css');
+
+html{
+    font-size: 16px;
+}
+body{
+    background: var(--clr-main-bg);
+    display: grid;
+    font-family: var(--ff-secondary);
+    /* haciendo que no hayan espacios entre los elementos */
+    margin: 0;
+    padding: 0;
+    /* flex-direction: column; */
+}
+
+/* classes */
+
+.hero-container{
+    /* para rellenar un elemento con esa imagen */
+    background: url(../imgs/header-camping.webp);
+    /* Centrar la imagen */
+    background-position: center;
+    /* Hace que se expanda para que rellene todo y no se repita */
+    background-size: cover;
+    /* redondear esquinas inferiores */
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+    /* Color de la letra */
+    color: var(--clr-white);    
+    /* min: funcion para hacer que se adapte al tamaño de la pantalla prefiriendo el valor mas pequeño */
+    height: min(55rem, 60rem, 65rem); 
+    text-align: center;
+    width: 100%;
+}
+
+/* clase para el menu de arriba */
+.top-nav{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 10rem;
+    margin-bottom: 12rem;
+}
+
+/* clase para editar la posicion de los elementos dentro del menu */
+.nav-list{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    /* para separarlos elementos en la lista */
+    gap: 2rem;
+    list-style-type: none;
+    margin-left: 2rem;
+
+}
+
+/* clase para editar los textos dentro del menu */
+.nav-list-link{
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: var(--fs-md);
+}
+
+/* clase para editar el texto principal */
+.hero-title{
+    font-family: var(--ff-main);
+    /* clamp: funcion para ajustar el texto segun lo necesario */
+    font-size: clamp(var(--fs-lg), 4rem, var(--fs-xl)); 
+    font-weight: var(--fw-bk);
+   
+}
+
+/* clase para editar la descripcion */
+.hero-text{
+    font-size: var(--fs-md);
+    width: clamp(30ch, 50%, 55ch); 
+    font-weight: var(--fw-rg);
+    margin: 0 auto 2rem;
+    
+}
+
+/* clase para editar el contenedor el boton */
+.cta-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+/* clase para editar el boton */
+.btn{
+    color: var(--clr-white);
+    display: flex;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-md);
+    text-decoration: none;
+    align-items: center;
+    background: var(--clr-main);
+    padding: 0.7rem 3.5rem;
+    border-radius: 1.5rem;
+}
+.btn2{
+    /* Letter Properties */
+    color: var(--clr-white);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-md);
+    text-decoration: none;
+    justify-content: center;
+    /* Layout Properties */
+    background: hsla(12, 76%, 61%, 1);
+    display: flex;
+    height: 50px;
+    width: 205px;
+    /* UI Properties */
+    align-items: center;
+    border-radius: 25px;
+} 
+.activities-container{
+    display: grid;
+    width: 80vw;
+    /* medidas para centrar lo elementos */
+    margin: 7rem auto;
+    /* hace que los elementos se posicionen de forma horizontal */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* para separar cada elemento */
+    gap: 1.5rem;
+}
+.activity{
+    display: grid;
+    background: var(--clr-white);
+    /* para redondear los bordes */
+    border-radius: 2rem;
+    text-align: center;
+    /* para que los elementos no queden pegados a el encuadre */
+    padding: 3rem 1rem 2.2rem;
+}
+.activity-icon{
+    margin: auto;
+}
+.activity-title{
+    margin: 1rem 0 0;
+    font-size: var(--fs-md);
+    font-family: var(--ff-main);
+}
+.activity-text{
+    padding: 0 1.8rem;
+    font-size: var(--fs-nm);
+    font-family: var(--ff-secondary);
+}
+.destinations-container{
+    text-align: center;
+}
+.destinations-title{
+    font-family: var(--ff-main);
+    font-size: clamp(var(--fs-md), 1.875rem, var(--fs-lg));
+    margin: 1rem auto;
+    width: 17ch;
+}
+.activity-thumb{
+    display: flex;
+    position: relative;
+    padding: 0 1rem;
+}
+.activities-image{
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+
+}
+.like-btn{
+    position: absolute;
+    background: var(--clr-white);
+    border-radius: .5rem;
+    border: none;
+    top: 1rem;
+    right: 2rem;
+}
+.view-all-btn{
+    background: var(--clr-main-bg);
+    color: var(--clr-main);
+    margin-top: 1rem;
+    border: .1rem solid var(--clr-main)
+}
+.activity-price{
+    display: block;
+    position: absolute;
+    background: var(--clr-white);
+    color: var(--clr-main);
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: .5rem 2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.read-btn{
+    display:block;
+    width: 50%;
+    margin: auto;
+    background: var(--clr-gray);
+    color: var(--clr-gray-text);
+    padding: 1rem 1.5rem;
+}
+.margin-none{
+    margin: 0;
+}
+.subscribe{
+    border-radius: 2rem;
+    background: var(--clr-inner-bg);
+}
+.in-touch{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin-left: 3rem;
+}
+.subscribe-title{
+    font-size: clamp(2rem, 2.25rem, var(--fs-lg));
+    width: min(80%, 90%, 100%);
+}
+.subscribe-image{
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.subscribe-form{
+    background: var(--clr-white);
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    gap: .5rem;
+
+}
+.email{
+    border: none;
+    padding: .5rem;
+    width: 100%;
+}
+.email:focus{
+    outline: none;
+    box-shadow: 0 0 0 .1rem var(--clr-main);
+    transition: box-shadow .3s ease;
+}
+.submit-btn{
+    background: url(../imgs/icons/send.svg) var(--clr-main);
+    border: none;
+    background-repeat: no-repeat;
+    border-radius: .75rem;
+    background-position: center;
+    padding: .75rem 1.25rem;
+    cursor: pointer;
+}
+.footer-container{
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    background: var(--clr-inner-bg );
+    width: 100%;
+    display: grid;
+    margin: 2rem 0 0;
+}
+.footer-content{
+    display: grid;
+    width: 80vw;
+    margin: 7rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+.nav-bottom-list{
+    padding: 0;
+    list-style-type: none;
+}
+.nav-bottom-link{
+    text-decoration: none;
+    font-size: var(--fs-md);
+    color: var(--clr-black);
+}
+.footer-legal{
+    text-align: center;
+    font-size: var(--fs-md);
+}
+.download-app{
+    display: grid;
+    width: 80vw;
+    margin: auto;
+}
+.cta-app-container{
+    display: flex;
+    gap: .5rem;
+}
+
+
+
+@media (max-width: 767.98px){
+    .top-nav{
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    .nav-list{
+        display: none;
+    }
+    
+    .in-touch{
+        margin: 0 1rem 2rem;
+        text-align: center;
+        order: 2;
+    }
+    .subscribe-image{
+        margin-bottom: 0;
+    }
+    .subscribe-title{
+        margin: auto;
+    }
+}
+
+
+
+/*nav{
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-rg);
+}
+ul {
+    list-style-type: none;
+  }
+li {
+    float: left;
+    text-align: center;
+    width: 5em;
+  }
+h1{
+    font-family: var(--ff-main);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bk);
+}
+p{
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-rg);
+}
+div{
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-md);
+}
+*/
+
