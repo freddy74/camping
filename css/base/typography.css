@@ -1,0 +1,45 @@
+.hero-title {
+    font-family: var(--ff-main);
+    font-size: clamp(var(--fs-lg), 4rem, var(--fs-xl));
+    /* se mueve en 3 valores para que se adapte la tipografia */
+}
+
+.hero-text {
+    font-size: var(--fs-md);
+    width: clamp(30ch, 50%, 55ch);
+    /* min - screensize - max */
+    margin: 0 auto 2rem;
+}
+
+.activity-tittle {
+    margin: 1rem;
+    font-size: var(--fs-md);
+    font-family: var(--ff-main);
+}
+
+.activity-text {
+    font-size: var(--fs-nm);
+}
+
+.destination-tittle {
+    font-family: var(--ff-main);
+    font-size: clamp(var(--fs-md), 1.875rem, var(--fs-lg));
+    margin: 1rem auto;
+    width: 17ch;
+}
+
+.subscribe-tittle {
+    font-size: clamp(2rem, 2.875rem, var(--fs-lg));
+    width: min(80%, 90%, 100%);
+}
+
+.nav-bottom-link {
+    color: var(--clr-black);
+    font-size: var(--fs-md);
+    text-decoration: none;
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: var(--fs-md);
+}

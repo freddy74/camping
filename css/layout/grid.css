@@ -1,0 +1,45 @@
+.activities-container {
+    display: grid;
+    width: 80vw;
+    margin: 2rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* ahorra mq, el auto-fit se ahorra muchas lineas de codigo con el mq */
+    gap: 1.5rem;
+}
+
+.activity {
+    display: grid;
+    background: var(--clr-white);
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.in-touch {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin-left: 3rem;
+}
+
+.subscribe {
+    /* padding: 2rem 6rem; */
+    border-radius: 2rem;
+    background: var(--clr-inner-bg);
+}
+
+.cta-app-container {
+    display: flex;
+    gap: .5rem;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.destination-container {
+    text-align: center;
+}
